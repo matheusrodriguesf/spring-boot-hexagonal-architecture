@@ -1,0 +1,10 @@
+server:
+  port: 8080
+    
+spring:
+  application:
+    name: cliente-service
+
+client:
+  via-cep:
+    url: https://viacep.com.br/ws
