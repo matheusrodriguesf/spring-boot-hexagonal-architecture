@@ -1,10 +1,11 @@
 package com.arcelino.clienteservice.application.core.usecase;
 
 import com.arcelino.clienteservice.application.core.domain.Cliente;
+import com.arcelino.clienteservice.application.ports.in.InsertClienteInputPort;
 import com.arcelino.clienteservice.application.ports.out.FindEnderecoByCepOutputPort;
 import com.arcelino.clienteservice.application.ports.out.InsertClienteOutputPort;
 
-public class InsertClienteUseCase {
+public class InsertClienteUseCase implements InsertClienteInputPort {
 
     private final FindEnderecoByCepOutputPort findEnderecoByCepOutputPort;
     private final InsertClienteOutputPort insertClienteOutputPort;
@@ -15,6 +16,7 @@ public class InsertClienteUseCase {
         this.insertClienteOutputPort = insertClienteOutputPort;
     }
 
+    @Override
     public void create(Cliente cliente, String cep) {
         var endereco = findEnderecoByCepOutputPort.findByCep(cep);
         cliente.setEndereco(endereco);

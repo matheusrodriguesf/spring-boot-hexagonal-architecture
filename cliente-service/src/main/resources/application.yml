@@ -4,6 +4,9 @@ server:
 spring:
   application:
     name: cliente-service
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/cliente
 
 client:
   via-cep:
