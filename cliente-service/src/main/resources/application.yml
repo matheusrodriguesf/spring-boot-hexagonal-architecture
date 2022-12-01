@@ -6,7 +6,12 @@ spring:
     name: cliente-service
   data:
     mongodb:
-      uri: mongodb://localhost:27017/cliente
+      host: localhost
+      port: 27017
+      authentication-database: admin
+      username: root
+      password: example
+      database: cliente
 
 client:
   via-cep:

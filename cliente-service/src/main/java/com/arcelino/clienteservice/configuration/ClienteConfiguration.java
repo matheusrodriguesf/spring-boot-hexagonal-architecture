@@ -5,9 +5,9 @@ import org.springframework.context.annotation.Configuration;
 
 import com.arcelino.clienteservice.adapters.out.DeleteClienteAdapter;
 import com.arcelino.clienteservice.adapters.out.FindClienteByIdAdapter;
+import com.arcelino.clienteservice.adapters.out.FindEnderecoByCepAdapter;
 import com.arcelino.clienteservice.adapters.out.InsertClienteAdapter;
 import com.arcelino.clienteservice.adapters.out.UpdateClienteAdapter;
-import com.arcelino.clienteservice.adapters.out.client.FindEnderecoByCepAdapter;
 import com.arcelino.clienteservice.application.core.usecase.DeleteClienteUseCase;
 import com.arcelino.clienteservice.application.core.usecase.FindClienteUseCase;
 import com.arcelino.clienteservice.application.core.usecase.InsertClienteUseCase;
